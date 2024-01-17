@@ -11,7 +11,7 @@ interface SidebarItemProps {
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ 
-    icon, 
+    icon: Icon,
     label, 
     active,
      href }) => {
@@ -37,7 +37,8 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
     `)}
     >
         
-      Sidebar Item
+      <Icon size={26}/>
+      <p className="truncate w-full">{label}</p>
     </Link>
   );
 };
